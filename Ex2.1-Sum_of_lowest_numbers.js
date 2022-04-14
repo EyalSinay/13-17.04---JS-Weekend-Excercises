@@ -30,8 +30,8 @@ function SumOfLowestNumbers(arr) {
     return minArr[0] + minArr[1];
 }
 
-// console.log(SumOfLowestNumbers([19, 5]));
-// console.log(SumOfLowestNumbers([19.5, 5.9, 42, 2, 77]));
-// console.log(SumOfLowestNumbers([19, 5, 42, 2, 77]));
-// console.log(SumOfLowestNumbers([10, 343445353, 3453445, 3453545353453]));
-// console.log(SumOfLowestNumbers([20, 20, 3, 3, 50, 6]));
+console.log(SumOfLowestNumbers([19, 5]));
+console.log(SumOfLowestNumbers([19.5, 5.9, 42, 2, 77]));
+console.log(SumOfLowestNumbers([19, 5, 42, 2, 77]));
+console.log(SumOfLowestNumbers([10, 343445353, 3453445, 3453545353453]));
+console.log(SumOfLowestNumbers([20, 20, 3, 3, 50, 6]));

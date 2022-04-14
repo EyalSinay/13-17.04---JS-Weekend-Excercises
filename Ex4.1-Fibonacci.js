@@ -1,7 +1,7 @@
 /*
 Ex4.1 - Fibonacci -
 “Write a function to return an n element in Fibonacci sequence” is one of the most common
-questions you can hear during the coding challenge interview part. In this blogpost I’m going to
+questions you can hear during the coding challenge interview part. In this blogPost I’m going to
 walk through the two of the most typical solutions for this problem and also cover a dreadful (for
 most of novice developers) topic of time complexity.
 So what is a Fibonacci sequence? According to Wikipedia:
