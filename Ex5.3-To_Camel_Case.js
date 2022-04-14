@@ -7,3 +7,20 @@ Examples
 toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
 */
+
+function toCamelCase(str){
+    const splitStrArr = str.split('');
+    for (let i = 0; i < splitStrArr.length; i++){
+        if (splitStrArr[i] === "-" || splitStrArr[i] === "_") {
+            splitStrArr[i+1] = splitStrArr[i+1].toUpperCase();
+        }
+    }
+    const newArr = splitStrArr.filter(char => char !== "-" && char !== "_");
+    var newStr = "";
+    for (char of newArr){
+        newStr += char;
+    }
+    return newStr;
+}
+
+console.log(toCamelCase("my-name_is-eyal_sinay"));

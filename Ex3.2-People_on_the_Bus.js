@@ -13,3 +13,37 @@ Please keep in mind that the test cases ensure that the number of people in the 
 >= 0. So the return integer can't be negative.
 The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 */
+
+const arr1 = [[5,0],[6,5],[7,1],[2,2],[3,3]] // passing the test
+const arr2 = [[5,1],[6,5],[7,1],[2,2],[3,3]] // does not pass the first test
+const arr3 = [[5,0],[6,100],[7,1],[2,2],[3,3]] // does not pass the second test
+const arr4 = [[5,5],[6,100],[7,1],[2,2],[3,3]] // does not pass both tests
+
+function numStillInBus(arr) {
+    var errorMsg = "";
+    if (arr[0][1] !== 0) {
+        errorMsg += "The bus is need to be empty in the first bus stop.";
+    }
+    var numInTheBuss = 0;
+    for (let i = 0; i < arr.length; i++){
+        numInTheBuss += arr[i][0];
+        numInTheBuss -= arr[i][1];
+        if (numInTheBuss < 0) {
+            if (errorMsg) {
+                errorMsg += "\n";
+            }
+            errorMsg += "Impossible values - the number of passengers on the bus is negative.";
+            break;
+        }
+    }
+    if (errorMsg) {
+        return errorMsg
+    } else {
+        return numInTheBuss;
+    }
+}
+
+console.log(numStillInBus(arr1));
+console.log(numStillInBus(arr2));
+console.log(numStillInBus(arr3));
+console.log(numStillInBus(arr4));

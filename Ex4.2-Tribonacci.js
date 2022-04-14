@@ -19,3 +19,27 @@ Signature will always contain 3 numbers; n will always be a non-negative number;
 return an empty array (except in C return NULL) and be ready for anything else which is not
 clearly specified ;)
 */
+
+function tribonacci(arr, n) {
+    if (arr.length !== 3 || Math.max(...arr) > 1 || Math.min(...arr) < 0) {
+        return "The array must contain 3 numbers, each of them must be either 0 or 1.";
+    }
+    if (n < 0){
+        return "n must bo positive number";
+    }
+    if (n === 0) {
+        return [];
+    }
+    if (n === 1) {
+        return [arr[0]];
+    }
+    if (n === 2) {
+        return [arr[0], arr[1]];
+    }
+    while (arr.length < n) {
+        arr.push(arr[arr.length - 3] + arr[arr.length - 2] + arr[arr.length - 1]);
+    }
+    return arr;
+}
+
+console.log(tribonacci([1, 1, 1], 20));

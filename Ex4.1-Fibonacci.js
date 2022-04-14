@@ -14,3 +14,25 @@ this:
 or this:
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
 */
+
+function fibonacci(num, n) {
+    if (num !== 0 && num !== 1) {
+        return "The number must to be or 0 or 1.";
+    }
+    if (n < 0){
+        return "n must bo positive number";
+    }
+    if (n === 0){
+        return [];
+    }
+    if (n === 1){
+        return [num];
+    }
+    const arr = [num, 1];
+    while (arr.length < n) {
+        arr.push(arr[arr.length - 2] + arr[arr.length - 1]);
+    }
+    return arr;
+}
+
+console.log(fibonacci(0, 20));
