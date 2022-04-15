@@ -10,3 +10,21 @@ Examples:
 toWeirdCase( "String" );//=> returns "StRiNg"
 toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
 */
+
+function toWeirdCase(str) {
+    if(!/^[a-zA-Z\s]+$/.test(str)){
+        return "The passed in string will only consist of alphabetical characters and spaces";
+    }
+    const arrStr = str.split('');
+    for (let i = 0; i < arrStr.length; i += 2) {
+        arrStr[i] = arrStr[i].toUpperCase();
+        if (arrStr[i + 1]) {
+            arrStr[i + 1] = arrStr[i + 1].toLowerCase();
+        }
+    }
+    str = arrStr.join('');
+    return str;
+}
+
+console.log(toWeirdCase("String"));
+console.log(toWeirdCase("Weird string case"));
