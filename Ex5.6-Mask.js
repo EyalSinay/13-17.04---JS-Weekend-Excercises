@@ -14,3 +14,19 @@ maskify("Skippy") == "##ippy"
 maskify("Nananananananananananananananana Batman!") ==
 "####################################man!"
 */
+
+function maskify(str){
+    const arrStr = str.split('');
+    for(var i = 0; i < arrStr.length - 4; i++){
+        arrStr[i] = '#';
+    }
+    str = arrStr.join('');
+    return str;
+}
+
+console.log(maskify("4556364607935616"));
+console.log(maskify("64607935616"));
+console.log(maskify("1"));
+console.log(maskify(""));
+console.log(maskify("Skippy"));
+console.log(maskify("Nananananananananananananananana Batman!"));

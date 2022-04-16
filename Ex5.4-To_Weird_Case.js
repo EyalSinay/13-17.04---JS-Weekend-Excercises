@@ -28,3 +28,4 @@ function toWeirdCase(str) {
 
 console.log(toWeirdCase("String"));
 console.log(toWeirdCase("Weird string case"));
+console.log(toWeirdCase("Weird string$#case"));
